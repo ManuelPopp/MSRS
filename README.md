@@ -2,7 +2,7 @@
 Landcover Classification with different spatial grain
 
 ## Sample_Grid_Cells.py
-Sample_Grid_Cells.py is a tool to use with QGIS. It selects *N* random rectangles from an input grid and exports the corresponding areas from three input raster layers. I created the grid that I used in QGIS (3.14.16) using the native *Create Grid* function with cell dimensions of 1000 × 1000 m and one of the raster layers as input. Subsequently, I deleted all grid cells that were not entirely covered by the raster area and introduced a new column named *id* as integer which were set to the respective row numbers using the QGIS Field Calculator.
+Sample_Grid_Cells.py is a tool to use with QGIS. It selects *N* random rectangles from an input grid and exports the corresponding areas from three input raster layers. I created the grid that I used in QGIS (3.14.16) using the native *Create Grid* function with cell dimensions of 5000 × 5000 m and one of the raster layers as input. Subsequently, I deleted all grid cells that were not entirely covered by the raster area and introduced a new column named *id* as integer which were set to the respective row numbers using the QGIS Field Calculator. For the given cell dimensions, this resulted in 75 grid cells of which I randomly selected 25 for further analyses.
 
 The Tool requires:
 - a vector layer with grid cells covered by the raster area and a field "id" containing the row numbers as integers
