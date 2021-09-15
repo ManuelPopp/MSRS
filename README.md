@@ -15,4 +15,4 @@ I obtained those files from the following websites:
 - - RGB: "Ortho 2018 du pays en RGB"
 - - IR: "Ortho 2018 du pays en infrarouge"
 - https://data.public.lu/fr/datasets/lis-l-land-cover-2018/
-- -- LIS-L Land Cover 2018: "landcover2018-raster.zip"
+- - LIS-L Land Cover 2018: "landcover2018-raster.zip"
