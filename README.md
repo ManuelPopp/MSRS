@@ -12,7 +12,7 @@ The Tool requires:
 
 I obtained those files from the following websites:
 - https://data.public.lu/fr/datasets/orthophoto-officielle-du-grand-duche-de-luxembourg-edition-2018/
-- - RGB: "Ortho 2018 du pays en RGB"
-- - IR: "Ortho 2018 du pays en infrarouge"
+- - RGB: "Ortho 2018 du pays en RGB" (URL stable: https://data.public.lu/fr/datasets/r/ce8b1b84-c11d-40af-9448-1395ce67eed8)
+- - IR: "Ortho 2018 du pays en infrarouge" (URL stable: https://data.public.lu/fr/datasets/r/2d8e6281-896a-466e-bd33-a05330ded5b6)
 - https://data.public.lu/fr/datasets/lis-l-land-cover-2018/
 - - LIS-L Land Cover 2018: "landcover2018-raster.zip"
