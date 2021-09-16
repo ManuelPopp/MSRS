@@ -18,7 +18,7 @@ I obtained those files from the following websites:
 - - LIS-L Land Cover 2018: "landcover2018-raster.zip"
 
 ## SimplifyRasters.R
-R script to aggregate various landcover classes. Adapted to the specific case of the LIS-L Land Cover 2018 data listed above. This data set contains groups of very similar classes that can be aggregated to fewer, larger classes. In this case, the resulting classes are
+SimplifyRasters.R is an R script to aggregate various landcover classes. Adapted to the specific case of the LIS-L Land Cover 2018 data listed above. This data set contains groups of very similar classes that can be aggregated to fewer, larger classes. In this case, the resulting classes are
 1) buildings
 2) roads
 3) agriculture/bare soil
