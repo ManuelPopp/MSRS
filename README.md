@@ -16,3 +16,11 @@ I obtained those files from the following websites:
 - - IR: "Ortho 2018 du pays en infrarouge" (URL stable: https://data.public.lu/fr/datasets/r/2d8e6281-896a-466e-bd33-a05330ded5b6)
 - https://data.public.lu/fr/datasets/lis-l-land-cover-2018/
 - - LIS-L Land Cover 2018: "landcover2018-raster.zip"
+
+## SimplifyRasters.R
+R script to aggregate various landcover classes. Adapted to the specific case of the LIS-L Land Cover 2018 data listed above. This data set contains groups of very similar classes that can be aggregated to fewer, larger classes. In this case, the resulting classes are
+1) buildings
+2) roads
+3) agriculture/bare soil
+4) forest
+5) water
