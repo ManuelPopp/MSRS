@@ -24,3 +24,7 @@ SimplifyRasters.R is an R script to aggregate various landcover classes. Adapted
 3) agriculture/bare soil
 4) forest
 5) water
+
+
+## SimplifyRasters.py
+Implementation of SimplifyRasters.R as QGIS Tool.
