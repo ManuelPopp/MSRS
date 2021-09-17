@@ -1,9 +1,12 @@
 """
 Created on Wed Sep 15 19:56:34 2021
 Random sampling of rectangular cells (extracted from a fishnet grid) from large raster files
+Name : Sample_Grid_Cells
+Group : MSRS
+With QGIS : 31416
 @author: Manuel
 Using QGIS 3.14.16
-""" 
+"""
 
 from qgis.core import QgsProcessing
 from qgis.core import QgsProcessingAlgorithm
