@@ -95,7 +95,7 @@ for(grain in spatial_grains){
                      mean_circumscr_circ = mean_cv$value,
                      sd_circumscr_circ = sd_cv$value)
     # append summary metrics
-    if(!exists(ls_metrics_summary)){
+    if(!exists("ls_metrics_summary")){
       ls_metrics_summary <- df
     }else{
       ls_metrics_summary <- rbind(ls_metrics_summary, df)
