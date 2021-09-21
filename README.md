@@ -28,3 +28,6 @@ SimplifyRasters.R is an R script to aggregate various landcover classes. Adapted
 
 ## SimplifyRasters.py
 Implementation of SimplifyRasters.R as a QGIS Tool.
+
+## ScaleDependentLSMetrics.R
+Calculate landscape metrics for the raster tiles of the land cover map (LIS-L Land Cover 2018) at all different spatial grains. Aggregation to coarser spatial grain is done using the function modal. Results can be used to explain trends in classification outputs with changing spatial grain.
