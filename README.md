@@ -31,3 +31,6 @@ Implementation of SimplifyRasters.R as a QGIS Tool.
 
 ## ScaleDependentLSMetrics.R
 Calculate landscape metrics for the raster tiles of the land cover map (LIS-L Land Cover 2018) at all different spatial grains. Aggregation to coarser spatial grain is done using the function modal. Results can be used to explain trends in classification outputs with changing spatial grain.
+
+## split_jobs subdirectory
+The split_jobs directory contains parts of the R-scripts organised in a way that similar calculations can be done in parallel via multiple independent R sessions. This can reduce the processing time dramatically, since the alternative implementation would be a loop that run those processes sequentially and uses only one virtual core insead of utilising the ressources efficiently.
