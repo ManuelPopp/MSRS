@@ -10,7 +10,6 @@ if(length(args) > 1){
 # - dataset: Luxembourg Land Uda Map 2018
 # - classes:
 # 1) buildings, 2) roads, 3) agriculture/bare soil 4) forest, 5) water
-# "C:\Program Files\R\R-4.0.2\bin\Rscript.exe" "D:\Dateien\Studium_KIT\Master_GOEK\10_FS_Geooekologie\Multi-skalige_Fernerkundungsverfahren\Projekt\rsc\split_jobs\Parallel_job3.R"
 #######################################################################|
 #----------------------------------------------------------------------|
 # general settings
