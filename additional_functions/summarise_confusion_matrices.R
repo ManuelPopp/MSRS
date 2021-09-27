@@ -95,7 +95,7 @@ average_matr <- function(matr_list, metric = "sd", add_acc = FALSE,
           }
         }
         cat("\\toprule\n")
-        cat(paste(paste0("\\multicolumn{2}{c}{", c_names, "}"),
+        cat("&", paste(paste0("\\multicolumn{2}{c}{", c_names, "}"),
                   collapse = " & "), "\\\\\n")
         cat("\\midrule\n")
         for(r in 1:nrow(matr_mean)){
