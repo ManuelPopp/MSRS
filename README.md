@@ -39,3 +39,4 @@ The split_jobs directory contains parts of the R-scripts organised in a way that
 - Parallel_job2.R Calculate land cover type frequencies for aggregated land cover data
 - Parallel_job3.R Tune and train SVM at all spatial resolutions
 - Parallel_job4.R Classify the RGB IR images with various spatial resolutions using SVM
+- Parallel_job5.R Summarise the class frequencies within the classified rasters
