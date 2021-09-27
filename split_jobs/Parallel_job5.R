@@ -54,14 +54,13 @@ for(scene in filenames){
   )
   df$perc <- df$count / sum_pxls
   # append class frequencies
-  if(!exists("class_frequencies")){
+  if(!exists("class_frequencies_classified")){
     class_frequencies_classified <- df
   }else{
-    class_frequencies_classified <- rbind(class_frequencies, df)
+    class_frequencies_classified <- rbind(class_frequencies_classified, df)
   }
   # remove variables
   rm(rst)
-  rm(rst_agg)
   # increase progress step
   step_i <- step_i + 1
 }
