@@ -34,3 +34,8 @@ Calculate landscape metrics for the raster tiles of the land cover map (LIS-L La
 
 ## split_jobs subdirectory
 The split_jobs directory contains parts of the R-scripts organised in a way that similar calculations can be done in parallel via multiple independent R sessions. This can reduce the processing time dramatically, since the alternative implementation would be a loop that run those processes sequentially and uses only one virtual core insead of utilising the ressources efficiently.
+- Parallel_job0.R Creata training data at all spatial resolutions
+- Parallel_job1.R Calculate landscape metrics for land cover data
+- Parallel_job2.R Calculate land cover type frequencies for aggregated land cover data
+- Parallel_job3.R Tune and train SVM at all spatial resolutions
+- Parallel_job4.R Classify the RGB IR images with various spatial resolutions using SVM
