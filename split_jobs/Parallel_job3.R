@@ -52,6 +52,7 @@ trnclass <- rep(as.factor(pols@data$layer), each = points_per_poly)
 
 #----------------------------------------------------------------------|
 ## tune SVM
+print("Tuning SVM...")
 set.seed(1337)
 #sigma <- quantile(as.vector(
 #  dist(trnval1[sample(seq(1, nrow(trnval1)), 1000), ])
@@ -79,7 +80,8 @@ print("Training SVM...")
 mod <- e1071::svm(trnval1, as.factor(trnclass),
            gamma = gamma, cost = cost,
            probability = TRUE, cross = 5)
-save(mod, file = file.path(wd, "out", "vrs", paste0("mod",
+dir.create(file.path(wd, "out", "mod"), showWarnings = FALSE)
+save(mod, file = file.path(wd, "out", "mod", paste0("mod",
                                                     grain, ".Rdata")))
 sink(file.path(wd, "out", paste0("ModSummary_", grain, ".txt")))
 summary(mod)
@@ -92,7 +94,7 @@ trntst <- cbind(as.factor(trnclass), trnval1)
 
 print("Model evaluation loop started.")
 N_it <- 5
-pb = txtProgressBar(min = 0, max = length(filenames), initial = 0)
+pb = txtProgressBar(min = 0, max = N_it, initial = 0)
 for(i in 1:N_it){
   setTxtProgressBar(pb, i)
   spl <- sample(seq(1, nrow(trntst)), nrow(trntst), replace = TRUE)#floor(nrow(trntst)/3))
@@ -113,21 +115,21 @@ for(i in 1:N_it){
 close(pb)
 
 dir.create(file.path(wd, "out", "met"), showWarnings = FALSE)
-save(confusion_mat, file.path(wd, "out", "met", paste0("confmatr",
+save(confusion_matr, file = file.path(wd, "out", "met", paste0("confmatr",
                                                        grain, ".Rdata")))
 
 acc_matr <- function(conf){
   user_acc <- vector()
-  for(i in 1:nrow(conf)){
-    user_acc[i] <- conf[i, i] / sum(conf[i, ])
+  for(i in 1:nrow(conf$table)){
+    user_acc[i] <- conf$table[i, i] / sum(conf$table[i, ])
   }
   prod_acc <- vector()
-  for(i in 1:ncol(conf)){
-    prod_acc[i] <- conf[i, i] / sum(conf[, i])
+  for(i in 1:nrow(conf$table)){
+    prod_acc[i] <- conf$table[i, i] / sum(conf$table[, i])
   }
-  return(cbind(rownames(conf), user_acc, prod_acc))
+  return(cbind(rownames(conf$table), user_acc, prod_acc))
 }
 accuracy_matr <- lapply(confusion_matr, FUN = acc_matr)
-save(accuracy_matr, file.path(wd, "out", "met", paste0("accmatr",
+save(accuracy_matr, file = file.path(wd, "out", "met", paste0("accmatr",
                                                        grain, ".Rdata")))
 print("Job finished.")
