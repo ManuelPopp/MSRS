@@ -60,8 +60,8 @@ average_matr <- function(matr_list, latex_file = NA,
       cat("\\hline\n")
       if(length(vec_sd) > 1){
         for(r in 1:nrow(matr_mean)){
-          cat(paste(formatC(matr_mean, digits = 1, format = "f"),
-                    formatC(matr_sd, digits = 1, format = "f"),
+          cat(paste(formatC(matr_mean[r, ], digits = 1, format = "f"),
+                    formatC(matr_sd[r, ], digits = 1, format = "f"),
                     sep = " \\(\\pm\\) ", collapse = " & "), "\\\\\n")
         }
       }else{
